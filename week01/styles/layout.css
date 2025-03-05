@@ -17,8 +17,10 @@ header {
     color: white;
     grid-column: 1 / 4; 
     grid-row: 1 / 2;
-    padding-bottom: 4rem;
-    padding-left: 1rem;
+}
+
+header p {
+    margin-left: 1rem;
 }
 
 nav {
@@ -26,6 +28,7 @@ nav {
     color: white;
     grid-column: 1 / 4; 
     grid-row: 2 / 3;
+    margin-top: 5rem;
 }
 
 ul {
