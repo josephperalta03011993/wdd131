@@ -76,6 +76,10 @@ main {
     padding: 10px;
 }
 
+.card ul li {
+    padding: 10px 15px;
+}
+
 #country{
     display: flex;
     gap: 1rem;
