@@ -1,0 +1,24 @@
+@media screen and (min-width: 512px) {
+    #temple-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 14px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #temple-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
