@@ -9,10 +9,22 @@
         justify-content: space-between;
     }
 
+    header h1 {
+        margin: auto 0;
+    }
+
     nav ul {
         flex-direction: row;
         justify-content: flex-end;
         padding: 14px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav a {
+        display: block;
     }
 }
 
