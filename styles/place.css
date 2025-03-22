@@ -31,6 +31,44 @@ section.hero img {
     vertical-align: bottom;
 }
 
+.container {
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 5px 10px;
+    justify-content: center;
+    text-align: left;
+}
+
+.info p {
+    display: contents; 
+}
+
+.info strong {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.weather-icon {
+    font-size: 40px;
+}
+
 @media screen and (min-width: 500px) {
     .hero picture img {
         width: 100%;
