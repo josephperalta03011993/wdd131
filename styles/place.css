@@ -1,0 +1,47 @@
+:root {
+    --blue: #0038A8;
+    --red: #CE1126;
+    --white: #FFFFFF;
+    --yellow: #FCD116;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    border-bottom: 20px solid #CE1126;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+section.hero img {
+    vertical-align: bottom;
+}
+
+@media screen and (min-width: 500px) {
+    .hero picture img {
+        width: 100%;
+        height: 300px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .hero picture img {
+        width: 100%;
+        height: 500px;
+    }
+}
