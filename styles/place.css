@@ -61,6 +61,10 @@ h2 {
     text-align: left;
 }
 
+picture {
+    background-color: var(--blue);
+}
+
 .info p {
     display: contents; 
 }
@@ -96,7 +100,7 @@ h2 {
         margin-top: -10px;
     }
 
-    h2::after {
+    .weather h2::after {
         content: "⛅";
         font-size: 2rem;
         margin-left: 20px;
