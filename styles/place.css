@@ -96,6 +96,16 @@ h2 {
         margin-top: -10px;
     }
 
+    h2::after {
+        content: "⛅";
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    svg {
+        display: none;
+    }
+
     .data {
         width: 80%;
         max-width: 300px;
