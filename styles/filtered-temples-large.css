@@ -1,0 +1,47 @@
+@media screen and (min-width: 512px) {
+    #temple-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        margin: auto 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 14px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #temple-images{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    section:hover {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
