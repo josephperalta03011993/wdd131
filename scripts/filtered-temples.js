@@ -77,7 +77,7 @@ const temples = [
 	{
 		templeName: "Bacolod Philippines",
 		location: "Bacolod Airport Access Road",
-		dedicated: "11 December 2021",
+		dedicated: "2021, December, 11",
 		area: 26700,
 		imageUrl:
 		"https://churchofjesuschristtemples.org/assets/img/temples/bacolod-philippines-temple/bacolod-philippines-temple-56418.jpg"
@@ -85,7 +85,7 @@ const temples = [
 	  {
 		templeName: "Cebu City",
 		location: "Gorordo Avenue Barangay Lahug",
-		dedicated: "14 November 2007",
+		dedicated: "2007, November, 14",
 		area: 29556,
 		imageUrl:
 		"https://churchofjesuschristtemples.org/assets/img/temples/cebu-city-philippines-temple/cebu-city-philippines-temple-33251.jpg"
@@ -93,43 +93,65 @@ const temples = [
 	  {
 		templeName: "Manila",
 		location: "Temple Drive corner Whiteplains Avenue",
-		dedicated: "25 August 1982",
+		dedicated: "1982, August, 25",
 		area: 26683,
 		imageUrl:
 		"https://churchofjesuschristtemples.org/assets/img/temples/manila-philippines-temple/manila-philippines-temple-48890.jpg"
 	  },
   ];
 
-createTempleCard();
+// Function to display temples based on a filter
+function displayTemples(filter) {
+    const templeContainer = document.querySelector("#temple-images");
+    templeContainer.innerHTML = ""; // Clear previous results
 
-function createTempleCard() {
-	temples.forEach(temple => {
-		
-		let card = document.createElement("section");
-		let name = document.createElement("h3");
-		let location = document.createElement("p");
-		let dedication = document.createElement("p");
-		let area = document.createElement("p");
-		let img = document.createElement("Img");
+    let filteredTemples = temples;
 
-		name.textContent = temple.templeName;
-		location.innerHTML = `Location: ${temple.location}`;
-		dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
-		area.innerHTML = `Area: ${temple.area} square feet`;
-		img.src = temple.imageUrl;
-		img.alt = `${temple.templeName} Temple`;
-		img.setAttribute("src", temple.imageUrl);
-		img.setAttribute("width", "400");
-		img.setAttribute("height", "250");
-		img.setAttribute("loading", "lazy");
+    if (filter === "old") {
+        filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+    } else if (filter === "new") {
+        filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+    } else if (filter === "large") {
+        filteredTemples = temples.filter(temple => temple.area > 90000);
+    } else if (filter === "small") {
+        filteredTemples = temples.filter(temple => temple.area < 10000);
+    }
 
-		card.appendChild(name);
-		card.appendChild(location);
-		card.appendChild(dedication);
-		card.appendChild(area);
-		card.appendChild(img);
+    // Generate temple cards
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
 
-		document.querySelector("#temple-images").appendChild(card);
+        name.textContent = temple.templeName;
+        location.innerHTML = `Location: ${temple.location}`;
+        dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
+        area.innerHTML = `Area: ${temple.area} square feet`;
+        img.src = temple.imageUrl;
+        img.alt = `${temple.templeName} Temple`;
+        img.setAttribute("width", "400");
+        img.setAttribute("height", "250");
+        img.setAttribute("loading", "lazy");
 
-	});
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        templeContainer.appendChild(card);
+    });
 }
+
+// Add event listeners for filter buttons
+document.querySelector("#old").addEventListener("click", () => displayTemples("old"));
+document.querySelector("#new").addEventListener("click", () => displayTemples("new"));
+document.querySelector("#large").addEventListener("click", () => displayTemples("large"));
+document.querySelector("#small").addEventListener("click", () => displayTemples("small"));
+document.querySelector("#home").addEventListener("click", () => displayTemples("all"));
+
+// Initial display of all temples
+displayTemples("all");

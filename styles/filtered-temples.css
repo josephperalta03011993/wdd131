@@ -50,6 +50,17 @@ nav a:hover {
     transition: .3s ease-in;
 }
 
+nav button {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border: none;
+}
+
+nav button:hover {
+    text-decoration: underline;
+}
+
 .active {
     text-decoration: underline;
 }
