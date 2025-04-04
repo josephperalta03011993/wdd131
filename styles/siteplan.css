@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #FF7043;
+    --accent-color: #212121;
+    --highlights-color: #FBC02D;
+    --background-color: #FAFAFA;
+    --black-color: #212121;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.highlights {
+    background-color: var(--highlights-color);
+    color: var(--black-color);
+    padding: 10px;
+    border-radius: 5px;
+}
