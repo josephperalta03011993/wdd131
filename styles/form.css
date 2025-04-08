@@ -43,7 +43,7 @@ label {
 }
 
 .required {
-    color: #d00;
+    color: #800000;
 }
 
 select, input[type="date"], input[type="text"], textarea {
@@ -84,7 +84,7 @@ input[type="submit"]:hover {
 footer {
     text-align: center;
     margin-top: 20px;
-    color: #777;
+    color: #000;
 }
 
 /* Mobile Responsiveness */
