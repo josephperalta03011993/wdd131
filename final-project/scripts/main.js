@@ -48,10 +48,12 @@ function toggleTheme() {
   
   // Gallery data (array of objects)
   const images = [
-    { src: 'route1.webp', alt: 'Mountain trail', caption: 'Epic ride in the Rockies' },
-    { src: 'gear.webp', alt: 'Biking gear', caption: 'My go-to trail setup' },
-    { src: 'bike-maintenance.webp', alt: 'Bike chain cleaning', caption: 'Keeping the drivetrain smooth' },
-    { src: 'trail2.webp', alt: 'Forest trail', caption: 'Evening ride through pines' }
+    { src: 'route2.webp', alt: 'Mountain trail', caption: 'Epic ride in the Rockies' },
+    { src: 'river.webp', alt: 'Biking gear', caption: 'Beautiful chill rides in the river' },
+    { src: 'park.webp', alt: 'Bike chain cleaning', caption: 'Beautiful destinations' },
+    { src: 'morning-rides.webp', alt: 'Forest trail', caption: 'Morning ride' },
+    { src: 'heart-lock.webp', alt: 'Heart Lock', caption: 'Heart lock great destinations for lovers'},
+    { src: 'group-ride.webp', alt: 'Group Ride', caption: 'Fun group rides!'}
   ];
   
   // Function to render gallery
@@ -60,7 +62,7 @@ function toggleTheme() {
     if (gallery) {
       gallery.innerHTML = images.map(img => `
         <figure>
-          <img src="assets/${img.src}" alt="${img.alt}" loading="lazy">
+          <img src="images/${img.src}" alt="${img.alt}" loading="lazy" width="500" height="250">
           <figcaption>${img.caption}</figcaption>
         </figure>
       `).join('');
