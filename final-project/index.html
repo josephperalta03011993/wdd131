@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biking Adventures: Discover biking routes, maintenance tips, and gear recommendations.">
+  <title>Home | Biking Adventures</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="assets/logo.webp" alt="Biking Adventures logo" class="logo">
+      <span class="site-name">Biking Adventures</span>
+    </div>
+    <div class="nav-container">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Main navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="routes-tips.html">Routes & Tips</a></li>
+          <li><a href="gallery-contact.html">Gallery & Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="theme-toggle">Dark Mode</button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Great Adventures Await!</h1>
+        <p>Embark on thrilling journeys, uncover hidden gems, and create unforgettable memories along the way.</p>
+        <a href="routes-tips.html" class="cta">Discover Route</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.webp" alt="Cyclist on mountain trail at sunset">
+      </div>
+    </section>
+    <section class="new-routes" aria-labelledby="new-routes-title">
+      <div class="new-routes-image">
+        <img src="images/new-routes.webp" alt="New biking route scenery" loading="lazy">
+      </div>
+      <div class="new-routes-content">
+        <h1 id="new-routes-title">New Routes</h1>
+        <p>Mt. Balagbag</p>
+        <p>Maramo River</p>
+        <p>Adventure Resort</p>
+      </div>
+    </section>
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Get Updates to the New Routes</h2>
+      <p>Sign up for our newsletter to be the first to know new routes and content.</p>
+      <br>
+      <form id="newsletter-form" aria-label="Newsletter signup form">
+        <input type="email" id="newsletter-email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-required="true" placeholder="Enter your email">
+        <button type="submit">Sign Up Now</button>
+      </form>
+    </section>
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Biker Testimonials</h2>
+      <div class="testimonials-grid">
+        <article aria-labelledby="testimonial-1">
+          <h3 id="testimonial-1">Joseph D. Peralta</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article aria-labelledby="testimonial-2">
+          <h3 id="testimonial-2">Joseph D. Peralta</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article aria-labelledby="testimonial-3">
+          <h3 id="testimonial-3">Joseph D. Peralta</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><span id="currentyear"></span> 😇 Joseph D. Peralta 😇 Biking Adventure</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

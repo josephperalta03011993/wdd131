@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View biking photos and contact Biking Adventures for inquiries.">
+  <title>Gallery & Contact | Biking Adventures</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="assets/logo.webp" alt="Biking Adventures logo" class="logo">
+      <span class="site-name">Biking Adventures</span>
+    </div>
+    <div class="nav-container">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Main navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="routes-tips.html">Routes & Tips</a></li>
+          <li><a href="gallery-contact.html" aria-current="page">Gallery & Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="theme-toggle">Dark Mode</button>
+  </header>
+  <main>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h1 id="gallery-title">Photo Gallery</h1>
+      <p>Explore moments from epic rides around the world.</p>
+      <div class="gallery-grid"></div>
+    </section>
+    <section class="contact" aria-labelledby="contact-title">
+      <h1 id="contact-title">Get in Touch</h1>
+      <p>Have a question about biking or want to share a route? Reach out below!</p>
+      <form id="contact-form" aria-label="Contact form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-required="true">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required aria-required="true"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p><span id="currentyear"></span> 😇 Joseph D. Peralta 😇 Biking Adventure</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

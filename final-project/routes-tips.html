@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore biking routes, learn bike maintenance, and find gear tips at Biking Adventures.">
+  <title>Routes & Tips | Biking Adventures</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="assets/logo.webp" alt="Biking Adventures logo" class="logo">
+      <span class="site-name">Biking Adventures</span>
+    </div>
+    <div class="nav-container">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Main navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="routes-tips.html" aria-current="page">Routes & Tips</a></li>
+          <li><a href="gallery-contact.html">Gallery & Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="theme-toggle">Dark Mode</button>
+  </header>
+  <main>
+    <section class="routes-tips" aria-labelledby="routes-tips-title">
+      <h1 id="routes-tips-title">Routes & Tips</h1>
+      <article aria-labelledby="route-1">
+        <h2 id="route-1">Uphill Challenge</h2>
+        <p>A 10-mile mountain trail with stunning views. Perfect for testing your endurance.</p>
+        <p><strong>Gear Tip:</strong> Use a lower gear ratio (e.g., 32T front, 11-42T rear) to maintain cadence without strain on steep climbs.</p>
+        <img src="assets/route1.webp" alt="Mountain biking trail" loading="lazy">
+      </article>
+      <article aria-labelledby="maintenance">
+        <h2 id="maintenance">Bike Maintenance</h2>
+        <p>Keep your mountain bike in top shape with these tips:</p>
+        <ul>
+          <li>Clean your chain weekly with degreaser to remove dirt.</li>
+          <li>Lubricate with wet or dry lube based on riding conditions.</li>
+          <li>Check tire pressure (30–40 PSI for trails) before each ride.</li>
+        </ul>
+        <img src="assets/bike-maintenance.webp" alt="Cleaning a bike chain" loading="lazy">
+      </article>
+      <article aria-labelledby="gear">
+        <h2 id="gear">Gear Recommendations</h2>
+        <p>Elevate your ride with trusted gear:</p>
+        <ul>
+          <li><strong>Pedals:</strong> Shimano SPD for grip and efficiency.</li>
+          <li><strong>Helmet:</strong> Giro Chronicle MIPS for safety and comfort.</li>
+          <li><strong>Tires:</strong> Maxxis Minion DHF for trail traction.</li>
+        </ul>
+        <img src="assets/gear.webp" alt="Biking gear setup" loading="lazy">
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p><span id="currentyear"></span> 😇 Joseph D. Peralta 😇 Biking Adventure</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
